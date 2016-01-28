@@ -21,14 +21,38 @@
     <nav class="navbar navbar-default">
       <!-- classes to separate the navigation bar from the main content -->
       <div class="container-fluid">
-        <!-- good type of container for nav bars -->
-        <ul class="nav navbar-nav">
-          <!-- these classes makes the list display horizontally -->
-          <!-- ul saying here's a list of related things -->
-          <li class="active"><a href="#">Home</a></li>
-          <!-- active class tells user where they are. highlights this link -->
-          <li><a href="#">My photos</a></li>
-        </ul>
+      <!-- good type of container for nav bars -->
+
+        <div class="navbar-header"> <!-- start collapsed navbar -->
+          <!-- this class just says it sits on top of everything else -->
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#main_navbar"
+            aria-expanded="false">open!</button>
+            <!-- type button is accessibility use. for clear semantics -->
+            <!-- classes saying this is something that should be shown when the navbar is collapsed -->
+            <!-- toggle is utilizing the bootstrap js library -->
+            <!-- target is the thing toggle is going to collapse -->
+            <!-- aria expanded set to false to imply it will not be here initially -->
+
+        </div> <!--/  collapsed navbar -->
+
+        <div
+        class="collapse navbar-collapse"
+        id="main_navbar"> <!-- start un-collapsed nav-bar -->
+          <!-- these classes makes it collapsable -->
+          <ul
+            class="nav navbar-nav">
+            <!-- these classes makes the list display horizontally -->
+            <!-- ul saying here's a list of related things -->
+            <li class="active"><a href="#">Home</a></li>
+            <!-- active class tells user where they are. highlights this link -->
+            <li><a href="#">My photos</a></li>
+          </ul>
+        </div> <!-- / un-collapsed nav-bar -->
+
       </div>
     </nav>
     <!-- nav tags increase the accessibility of your site. for semantic meaning -->
